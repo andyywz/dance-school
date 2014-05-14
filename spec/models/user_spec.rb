@@ -5,7 +5,7 @@ describe User do
     @user = create_fake_user
   end
   
-  it "exists" do
+  xit "exists" do
     expect(@user).to be
   end
 end

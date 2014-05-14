@@ -9,6 +9,7 @@ gem 'pg'
 
 group :test, :development do
   gem 'rspec-rails'
+  gem 'faker'
 end
 
 # Gems used only for assets and not required

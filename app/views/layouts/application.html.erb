@@ -6,8 +6,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  
   <%= yield %>
   
   <%= javascript_include_tag "application" %>
+  <!-- Refactor this out later -->
+  <script>
+    $('.back').on('click',function(){
+      history.back()
+    });
+  </script>
+
 </body>
 </html>

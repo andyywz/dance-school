@@ -1,1 +1,9 @@
-= @course.inspect
+%h1= @course.name
+%button.back Back
+
+%h4 Students:
+%ul
+  - @users.each do |user|
+    %li
+      %a{href: user_path(user.id)}= user.name
+  

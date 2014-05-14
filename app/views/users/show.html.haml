@@ -1,0 +1,10 @@
+%h1= @user.username
+
+%h4= "Name: #{@user.first_name} #{@user.last_name}"
+%h4= "Email: #{@user.email}"
+%h4 Classes
+
+%ul
+  - @courses.each do |course|
+    %li
+      %a{href: "#"}= course.name

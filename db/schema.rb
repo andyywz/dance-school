@@ -11,7 +11,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140514155833) do
+ActiveRecord::Schema.define(:version => 20140514180053) do
+
+  create_table "courses", :force => true do |t|
+    t.string   "name",                                      :null => false
+    t.string   "dance_style",                               :null => false
+    t.string   "instructor",  :default => "TBA"
+    t.string   "venue",       :default => "TBA"
+    t.text     "description", :default => "No description"
+    t.float    "price",       :default => 0.0
+    t.date     "date"
+    t.time     "time"
+    t.datetime "created_at",                                :null => false
+    t.datetime "updated_at",                                :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "first_name", :null => false

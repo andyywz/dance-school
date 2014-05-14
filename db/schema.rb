@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(:version => 20140514181622) do
     t.string   "instructor",  :default => "TBA"
     t.string   "venue",       :default => "TBA"
     t.text     "description", :default => "No description"
-    t.float    "price",       :default => 0.0
+    t.integer  "price",       :default => 0
     t.date     "date"
     t.time     "time"
     t.datetime "created_at",                                :null => false

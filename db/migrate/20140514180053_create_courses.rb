@@ -6,7 +6,7 @@ class CreateCourses < ActiveRecord::Migration
       t.string :instructor, default: "TBA"
       t.string :venue, default: "TBA"
       t.text :description, default: "No description"
-      t.float :price, default: 0
+      t.integer :price, default: 0
       t.date :date
       t.time :time
       

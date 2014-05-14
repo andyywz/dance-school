@@ -1,0 +1,13 @@
+%table
+  %thead
+    %tr
+      %th Name
+      %th Instructor
+      %th Price
+  %tbody
+    - @courses.each do |course|
+      %tr
+        %td{href: course_path(course.id)}= course.name
+        %td{href: course_path(course.id)}= course.instructor
+        %td{href: course_path(course.id)}= course.price
+    

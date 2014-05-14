@@ -1,0 +1,15 @@
+!!!
+%html{:lang => "en"} 
+  %head 
+    %meta{:charset => "UTF-8"} 
+    %title Dance School
+    = stylesheet_link_tag "application", media: "all"
+    = csrf_meta_tags
+  %body
+    %a{href: root_path} Courses
+    %a{href: users_path} Students
+    
+    = yield
+    
+    = javascript_include_tag "application"
+    

@@ -4,12 +4,28 @@
     %meta{:charset => "UTF-8"} 
     %title Dance School
     = stylesheet_link_tag "application", media: "all"
+    %link{rel: "stylesheet", href: "http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"}
+    
     = csrf_meta_tags
   %body
-    %a{href: root_path} Courses
-    %a{href: users_path} Students
+    %nav.navbar.navbar-default{role: "navigation"}
+      .container-fluid
+        .navbar-header
+          %button.navbar-toggle{type: "button", data: {toggle: "collapse", target: "#nav-collapse"}}
+            %span.sr-only Toggle navigation
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          %a.navbar-brand{href: root_path} Home
+        
+        .collapse.navbar-collapse#nav-collapse
+          %ul.nav.navbar-nav
+            %li
+              %a{href: users_path} Students
+            %li
+              %a{href: courses_path} Courses
     
     = yield
     
+    %script{src: "http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"}
     = javascript_include_tag "application"
-    

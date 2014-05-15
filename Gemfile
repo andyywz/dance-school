@@ -5,6 +5,7 @@ gem 'rails', '3.2.17'
 gem 'haml'
 gem 'pg'
 gem 'devise'
+gem 'faker'
 
 group :production do
   gem 'rails_12factor'  
@@ -12,7 +13,6 @@ end
 
 group :test, :development do
   gem 'rspec-rails'
-  gem 'faker'
 end
 
 # Gems used only for assets and not required

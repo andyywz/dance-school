@@ -2,7 +2,8 @@ main_user = User.create({
   first_name: "Andy",
   last_name: "Yong",
   username: "andyywz",
-  email: "andyywz@gmail.com"
+  email: "andyywz@gmail.com",
+  password: "password"
 })
 
 4.times do
@@ -11,7 +12,8 @@ main_user = User.create({
     first_name: first_name,
     last_name: last_name,
     username: Faker::Internet.user_name("#{first_name} #{last_name}"),
-    email: Faker::Internet.email(first_name)
+    email: Faker::Internet.email(first_name),
+    password: "password"
   })
 end
 

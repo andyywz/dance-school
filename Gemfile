@@ -4,6 +4,7 @@ gem 'rails', '3.2.17'
 
 gem 'haml'
 gem 'pg'
+gem 'devise'
 
 group :test, :development do
   gem 'rspec-rails'

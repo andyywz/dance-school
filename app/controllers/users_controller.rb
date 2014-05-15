@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_filter :user_signed_in?, only: :show
+  
   def index
     @users = User.all
   end

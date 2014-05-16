@@ -4,13 +4,15 @@
     %meta{:charset => "UTF-8"} 
     %title Dance School
     = stylesheet_link_tag "application", media: "all"
-    %link{rel: "stylesheet", href: "http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"}
+    = stylesheet_link_tag "bootstrap.min.css"
     
     = csrf_meta_tags
   %body
     = render partial: "shared/header"
     
-    = yield
+    .container
+      = yield
     
-    %script{src: "http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"}
+    = javascript_include_tag "jquery-1.11.1.min.js"
+    = javascript_include_tag "bootstrap.min.js"
     = javascript_include_tag "application"
